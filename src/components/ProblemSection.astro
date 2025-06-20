@@ -1,0 +1,122 @@
+<section class="problem section">
+  <div class="container">
+    <div class="problem-content">
+      <h2 class="section-title">
+        Are You Tired of Being <span class="text-accent">Underpaid</span> and <span class="text-accent">Undervalued</span>?
+      </h2>
+      <div class="problems-grid">
+        <div class="problem-card card fade-in">
+          <div class="problem-icon">💸</div>
+          <h3>Chasing Low-Paying Gigs</h3>
+          <p>Spending hours bidding on $50 Upwork projects while competing with hundreds of other writers.</p>
+        </div>
+        <div class="problem-card card fade-in">
+          <div class="problem-icon">🔄</div>
+          <h3>Endless Revisions</h3>
+          <p>Dealing with clients who want "just one more change" and never seem satisfied with your work.</p>
+        </div>
+        <div class="problem-card card fade-in">
+          <div class="problem-icon">📉</div>
+          <h3>Inconsistent Income</h3>
+          <p>Never knowing where your next paycheck will come from or if you'll make rent this month.</p>
+        </div>
+        <div class="problem-card card fade-in">
+          <div class="problem-icon">😤</div>
+          <h3>Client Drama</h3>
+          <p>Managing difficult clients who don't respect your time, expertise, or boundaries.</p>
+        </div>
+        <div class="problem-card card fade-in">
+          <div class="problem-icon">🚫</div>
+          <h3>No Clear Career Path</h3>
+          <p>Feeling stuck in a cycle with no idea how to level up or build a real writing career.</p>
+        </div>
+        <div class="problem-card card fade-in">
+          <div class="problem-icon">⏰</div>
+          <h3>Burnout & Overwhelm</h3>
+          <p>Working long hours for little pay, feeling exhausted and questioning your worth as a writer.</p>
+        </div>
+      </div>
+      <div class="solution-preview">
+        <p class="solution-text">
+          <strong>What if there was a better way?</strong> What if you could use your existing writing skills to land a stable, high-paying career in technical writing — without starting from scratch?
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .problem {
+    background: var(--bg-secondary);
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--text-primary);
+  }
+
+  .problems-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .problem-card {
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+
+  .problem-card:hover {
+    transform: translateY(-8px);
+  }
+
+  .problem-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .problem-card h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+  }
+
+  .problem-card p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+
+  .solution-preview {
+    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+    padding: 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  .solution-text {
+    color: white;
+    font-size: 1.25rem;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  @media (max-width: 768px) {
+    .section-title {
+      font-size: 2rem;
+    }
+
+    .problems-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .solution-text {
+      font-size: 1.125rem;
+    }
+  }
+</style>

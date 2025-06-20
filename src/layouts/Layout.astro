@@ -1,0 +1,565 @@
+---
+export interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "Transform your writing skills into a high-paying technical writing career earning $80K-$150K/year" } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    /* Light mode colors */
+    --bg-primary: #ffffff;
+    --bg-secondary: #f9fafb;
+    --bg-tertiary: #f8fafc;
+    --text-primary: #1f2937;
+    --text-secondary: #6b7280;
+    --text-tertiary: #4b5563;
+    --border-color: #e5e7eb;
+    --card-bg: #ffffff;
+    --card-shadow: rgba(0, 0, 0, 0.05);
+    --card-shadow-hover: rgba(0, 0, 0, 0.1);
+    --header-bg: rgba(255, 255, 255, 0.95);
+    --gradient-bg: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  }
+
+  [data-theme="dark"] {
+    /* Dark mode colors */
+    --bg-primary: #111827;
+    --bg-secondary: #1f2937;
+    --bg-tertiary: #374151;
+    --text-primary: #f9fafb;
+    --text-secondary: #d1d5db;
+    --text-tertiary: #9ca3af;
+    --border-color: #374151;
+    --card-bg: #1f2937;
+    --card-shadow: rgba(0, 0, 0, 0.3);
+    --card-shadow-hover: rgba(0, 0, 0, 0.4);
+    --header-bg: rgba(31, 41, 55, 0.95);
+    --gradient-bg: linear-gradient(135deg, #1f2937 0%, #374151 100%);
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    color: var(--text-primary);
+    background-color: var(--bg-primary);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    overflow-x: hidden;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  .section {
+    padding: 4rem 0;
+  }
+
+  .section-lg {
+    padding: 6rem 0;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.875rem 2rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    border: none;
+    font-size: 1rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+  }
+
+  .btn:hover::before {
+    left: 100%;
+  }
+
+  .btn-primary {
+    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+    color: white;
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
+  }
+
+  .btn-secondary {
+    background: var(--card-bg);
+    color: #1e3a8a;
+    border: 2px solid #1e3a8a;
+  }
+
+  .btn-secondary:hover {
+    background: #1e3a8a;
+    color: white;
+    transform: translateY(-2px);
+  }
+
+  .btn-accent {
+    background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+    color: white;
+    box-shadow: 0 4px 15px rgba(249, 115, 22, 0.3);
+  }
+
+  .btn-accent:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(249, 115, 22, 0.4);
+  }
+
+  .text-gradient {
+    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradientShift 3s ease-in-out infinite alternate;
+  }
+
+  @keyframes gradientShift {
+    0% {
+      background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+    }
+    100% {
+      background: linear-gradient(135deg, #3b82f6 0%, #1e3a8a 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+    }
+  }
+
+  .text-accent {
+    color: #f97316;
+  }
+
+  .text-success {
+    color: #10b981;
+  }
+
+  /* Advanced Animation Classes */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  }
+
+  .fade-in-left {
+    opacity: 0;
+    transform: translateX(-30px);
+    animation: fadeInLeft 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  }
+
+  .fade-in-right {
+    opacity: 0;
+    transform: translateX(30px);
+    animation: fadeInRight 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  }
+
+  .scale-in {
+    opacity: 0;
+    transform: scale(0.8);
+    animation: scaleIn 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  }
+
+  .slide-up {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: slideUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  }
+
+  .stagger-1 { animation-delay: 0.1s; }
+  .stagger-2 { animation-delay: 0.2s; }
+  .stagger-3 { animation-delay: 0.3s; }
+  .stagger-4 { animation-delay: 0.4s; }
+  .stagger-5 { animation-delay: 0.5s; }
+  .stagger-6 { animation-delay: 0.6s; }
+
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeInLeft {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes fadeInRight {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes scaleIn {
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes slideUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .card {
+    background: var(--card-bg);
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 4px 6px var(--card-shadow);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid var(--border-color);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #1e3a8a, #3b82f6, #f97316);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+  }
+
+  .card:hover::before {
+    transform: scaleX(1);
+  }
+
+  .card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 40px var(--card-shadow-hover);
+  }
+
+  /* Floating Animation */
+  .float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  /* Pulse Animation */
+  .pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.7;
+    }
+  }
+
+  /* Bounce Animation */
+  .bounce-in {
+    animation: bounceIn 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  @keyframes bounceIn {
+    0% {
+      transform: scale(0.3);
+      opacity: 0;
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    70% {
+      transform: scale(0.9);
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  /* Rotate Animation */
+  .rotate-in {
+    animation: rotateIn 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  @keyframes rotateIn {
+    0% {
+      transform: rotate(-180deg) scale(0.5);
+      opacity: 0;
+    }
+    100% {
+      transform: rotate(0deg) scale(1);
+      opacity: 1;
+    }
+  }
+
+  /* Dark mode toggle button */
+  .theme-toggle {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    color: var(--text-primary);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .theme-toggle::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.1) 0%, transparent 70%);
+    transition: all 0.3s ease;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .theme-toggle:hover::before {
+    width: 100px;
+    height: 100px;
+  }
+
+  .theme-toggle:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 15px var(--card-shadow-hover);
+  }
+
+  .theme-toggle svg {
+    width: 1.25rem;
+    height: 1.25rem;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1;
+  }
+
+  .theme-toggle:hover svg {
+    transform: rotate(180deg);
+  }
+
+  /* Parallax Effect */
+  .parallax {
+    transform: translateZ(0);
+    transition: transform 0.1s ease-out;
+  }
+
+  /* Smooth Scrolling Enhancements */
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      padding: 0 1rem;
+    }
+
+    .section {
+      padding: 2rem 0;
+    }
+
+    .section-lg {
+      padding: 3rem 0;
+    }
+
+    .card:hover {
+      transform: translateY(-4px) scale(1.01);
+    }
+  }
+
+  /* Reduced motion for accessibility */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+</style>
+
+<script>
+  // Theme toggle functionality
+  function initTheme() {
+    const themeToggle = document.getElementById('theme-toggle');
+    const html = document.documentElement;
+    
+    // Check for saved theme preference or default to light mode
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    html.setAttribute('data-theme', savedTheme);
+    
+    // Update toggle icon based on current theme
+    function updateToggleIcon() {
+      const currentTheme = html.getAttribute('data-theme');
+      const sunIcon = themeToggle?.querySelector('.sun-icon');
+      const moonIcon = themeToggle?.querySelector('.moon-icon');
+      
+      if (currentTheme === 'dark') {
+        sunIcon?.style.setProperty('display', 'block');
+        moonIcon?.style.setProperty('display', 'none');
+      } else {
+        sunIcon?.style.setProperty('display', 'none');
+        moonIcon?.style.setProperty('display', 'block');
+      }
+    }
+    
+    // Initial icon update
+    updateToggleIcon();
+    
+    // Toggle theme on button click
+    themeToggle?.addEventListener('click', () => {
+      const currentTheme = html.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      
+      html.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+      updateToggleIcon();
+    });
+  }
+
+  // Advanced Animation Observer
+  function initAnimations() {
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.animationPlayState = 'running';
+          
+          // Add stagger effect to child elements
+          const children = entry.target.querySelectorAll('.stagger-child');
+          children.forEach((child, index) => {
+            child.style.animationDelay = `${index * 0.1}s`;
+            child.classList.add('fade-in');
+          });
+        }
+      });
+    }, observerOptions);
+
+    // Observe all animated elements
+    document.querySelectorAll('.fade-in, .fade-in-left, .fade-in-right, .scale-in, .slide-up').forEach(el => {
+      el.style.animationPlayState = 'paused';
+      observer.observe(el);
+    });
+  }
+
+  // Parallax Effect
+  function initParallax() {
+    const parallaxElements = document.querySelectorAll('.parallax');
+    
+    window.addEventListener('scroll', () => {
+      const scrolled = window.pageYOffset;
+      const rate = scrolled * -0.5;
+      
+      parallaxElements.forEach(element => {
+        element.style.transform = `translateY(${rate}px)`;
+      });
+    });
+  }
+
+  // Smooth hover effects for cards
+  function initCardEffects() {
+    const cards = document.querySelectorAll('.card');
+    
+    cards.forEach(card => {
+      card.addEventListener('mouseenter', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        
+        card.style.setProperty('--mouse-x', `${x}px`);
+        card.style.setProperty('--mouse-y', `${y}px`);
+      });
+    });
+  }
+
+  // Initialize all animations and effects
+  function initAll() {
+    initTheme();
+    initAnimations();
+    initParallax();
+    initCardEffects();
+  }
+  
+  // Initialize when DOM is loaded
+  document.addEventListener('DOMContentLoaded', initAll);
+  
+  // Also initialize on page navigation (for SPAs)
+  document.addEventListener('astro:page-load', initAll);
+</script>
