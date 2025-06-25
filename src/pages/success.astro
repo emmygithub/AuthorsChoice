@@ -19,151 +19,145 @@ import Footer from '../components/Footer.astro';
       </div>
 
       <div class="testimonials-grid">
-        <!-- Student Testimonial Cards (copied from your code) -->
-        <div class="testimonial-card card fade-in stagger-1">
-          <div class="testimonial-content">
-            <div class="quote-icon rotate-in">"</div>
-            <p class="testimonial-text">
-              "I went from making $30/hour as a freelance blogger to landing a $95K technical writing role at a SaaS company. The program completely changed my life — I finally have the stability and respect I deserved."
-            </p>
-          </div>
-          <div class="testimonial-author">
-            <div class="author-avatar">
-              <div class="avatar-placeholder">SC</div>
-            </div>
-            <div class="author-info">
-              <h4>Sarah Chen</h4>
-              <p>Former Freelance Blogger → Technical Writer at Stripe</p>
-              <div class="salary-increase">
-                <span class="old-salary">$30/hr</span>
-                <span class="arrow">→</span>
-                <span class="new-salary pulse">$95K/year</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="testimonial-card card fade-in stagger-2">
-          <div class="testimonial-content">
-            <div class="quote-icon rotate-in">"</div>
-            <p class="testimonial-text">
-              "As an English major with no tech background, I was skeptical. But the program showed me exactly how to position my skills. I landed my first technical writing job 8 weeks after starting the course."
-            </p>
-          </div>
-          <div class="testimonial-author">
-            <div class="author-avatar">
-              <div class="avatar-placeholder">MJ</div>
-            </div>
-            <div class="author-info">
-              <h4>Marcus Johnson</h4>
-              <p>English Graduate → Technical Writer at Notion</p>
-              <div class="salary-increase">
-                <span class="old-salary">$0/year</span>
-                <span class="arrow">→</span>
-                <span class="new-salary pulse">$78K/year</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="testimonial-card card fade-in stagger-3">
-          <div class="testimonial-content">
-            <div class="quote-icon rotate-in">"</div>
-            <p class="testimonial-text">
-              "After 12 years in customer service, I was burnt out and underpaid. This program gave me a clear path to pivot into tech. I'm now working remotely and earning more than I ever thought possible."
-            </p>
-          </div>
-          <div class="testimonial-author">
-            <div class="author-avatar">
-              <div class="avatar-placeholder">JR</div>
-            </div>
-            <div class="author-info">
-              <h4>Jennifer Rodriguez</h4>
-              <p>Customer Service → Senior Technical Writer at Shopify</p>
-              <div class="salary-increase">
-                <span class="old-salary">$35K/year</span>
-                <span class="arrow">→</span>
-                <span class="new-salary pulse">$110K/year</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="testimonial-card card fade-in stagger-4">
-          <div class="testimonial-content">
-            <div class="quote-icon rotate-in">"</div>
-            <p class="testimonial-text">
-              "The portfolio projects were game-changers. Instead of just talking about my writing skills, I could show exactly what I could do. Recruiters started reaching out to ME on LinkedIn."
-            </p>
-          </div>
-          <div class="testimonial-author">
-            <div class="author-avatar">
-              <div class="avatar-placeholder">DK</div>
-            </div>
-            <div class="author-info">
-              <h4>David Kim</h4>
-              <p>Content Creator → Technical Writer at Atlassian</p>
-              <div class="salary-increase">
-                <span class="old-salary">$25/hr</span>
-                <span class="arrow">→</span>
-                <span class="new-salary pulse">$85K/year</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="testimonial-card card fade-in stagger-5">
-          <div class="testimonial-content">
-            <div class="quote-icon rotate-in">"</div>
-            <p class="testimonial-text">
-              "I was tired of chasing $50 Upwork gigs and dealing with difficult clients. Now I have a stable remote job with amazing benefits and colleagues who respect my expertise."
-            </p>
-          </div>
-          <div class="testimonial-author">
-            <div class="author-avatar">
-              <div class="avatar-placeholder">LT</div>
-            </div>
-            <div class="author-info">
-              <h4>Lisa Thompson</h4>
-              <p>Freelance Writer → Technical Writer at Zoom</p>
-              <div class="salary-increase">
-                <span class="old-salary">$40/hr</span>
-                <span class="arrow">→</span>
-                <span class="new-salary pulse">$92K/year</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="testimonial-card card fade-in stagger-6">
-          <div class="testimonial-content">
-            <div class="quote-icon rotate-in">"</div>
-            <p class="testimonial-text">
-              "The interview coaching was incredible. I went from being nervous about technical questions to confidently discussing API documentation and user experience. I got offers from 3 companies!"
-            </p>
-          </div>
-          <div class="testimonial-author">
-            <div class="author-avatar">
-              <div class="avatar-placeholder">AP</div>
-            </div>
-            <div class="author-info">
-              <h4>Ahmed Patel</h4>
-              <p>Administrative Assistant → Technical Writer at Salesforce</p>
-              <div class="salary-increase">
-                <span class="old-salary">$38K/year</span>
-                <span class="arrow">→</span>
-                <span class="new-salary pulse">$88K/year</span>
-              </div>
-            </div>
-          </div>
+  <!-- Student Testimonial Cards with random avatars -->
+  <div class="testimonial-card card fade-in stagger-1">
+    <div class="testimonial-content">
+      <p class="testimonial-text">
+        "I went from making $30/hour as a freelance blogger to landing a $95K technical writing role at a SaaS company. The program completely changed my life — I finally have the stability and respect I deserved."
+      </p>
+    </div>
+    <div class="testimonial-author">
+      <div class="author-avatar">
+        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Sarah Chen Avatar" class="avatar-img">
+      </div>
+      <div class="author-info">
+        <h4>Sarah Chen</h4>
+        <p>Former Freelance Blogger → Technical Writer at Stripe</p>
+        <div class="salary-increase">
+          <span class="old-salary">$30/hr</span>
+          <span class="arrow">→</span>
+          <span class="new-salary pulse">$95K/year</span>
         </div>
       </div>
+    </div>
+  </div>
+
+  <div class="testimonial-card card fade-in stagger-2">
+    <div class="testimonial-content">
+      <p class="testimonial-text">
+        "As an English major with no tech background, I was skeptical. But the program showed me exactly how to position my skills. I landed my first technical writing job 8 weeks after starting the course."
+      </p>
+    </div>
+    <div class="testimonial-author">
+      <div class="author-avatar">
+        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Marcus Johnson Avatar" class="avatar-img">
+      </div>
+      <div class="author-info">
+        <h4>Marcus Johnson</h4>
+        <p>English Graduate → Technical Writer at Notion</p>
+        <div class="salary-increase">
+          <span class="old-salary">$0/year</span>
+          <span class="arrow">→</span>
+          <span class="new-salary pulse">$78K/year</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="testimonial-card card fade-in stagger-3">
+    <div class="testimonial-content">
+      <p class="testimonial-text">
+        "After 12 years in customer service, I was burnt out and underpaid. This program gave me a clear path to pivot into tech. I'm now working remotely and earning more than I ever thought possible."
+      </p>
+    </div>
+    <div class="testimonial-author">
+      <div class="author-avatar">
+        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Jennifer Rodriguez Avatar" class="avatar-img">
+      </div>
+      <div class="author-info">
+        <h4>Jennifer Rodriguez</h4>
+        <p>Customer Service → Senior Technical Writer at Shopify</p>
+        <div class="salary-increase">
+          <span class="old-salary">$35K/year</span>
+          <span class="arrow">→</span>
+          <span class="new-salary pulse">$110K/year</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="testimonial-card card fade-in stagger-4">
+    <div class="testimonial-content">
+      <p class="testimonial-text">
+        "The portfolio projects were game-changers. Instead of just talking about my writing skills, I could show exactly what I could do. Recruiters started reaching out to ME on LinkedIn."
+      </p>
+    </div>
+    <div class="testimonial-author">
+      <div class="author-avatar">
+        <img src="https://randomuser.me/api/portraits/men/77.jpg" alt="David Kim Avatar" class="avatar-img">
+      </div>
+      <div class="author-info">
+        <h4>David Kim</h4>
+        <p>Content Creator → Technical Writer at Atlassian</p>
+        <div class="salary-increase">
+          <span class="old-salary">$25/hr</span>
+          <span class="arrow">→</span>
+          <span class="new-salary pulse">$85K/year</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="testimonial-card card fade-in stagger-5">
+    <div class="testimonial-content">
+      <p class="testimonial-text">
+        "I was tired of chasing $50 Upwork gigs and dealing with difficult clients. Now I have a stable remote job with amazing benefits and colleagues who respect my expertise."
+      </p>
+    </div>
+    <div class="testimonial-author">
+      <div class="author-avatar">
+        <img src="https://randomuser.me/api/portraits/women/51.jpg" alt="Lisa Thompson Avatar" class="avatar-img">
+      </div>
+      <div class="author-info">
+        <h4>Lisa Thompson</h4>
+        <p>Freelance Writer → Technical Writer at Zoom</p>
+        <div class="salary-increase">
+          <span class="old-salary">$40/hr</span>
+          <span class="arrow">→</span>
+          <span class="new-salary pulse">$92K/year</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="testimonial-card card fade-in stagger-6">
+    <div class="testimonial-content">
+      <p class="testimonial-text">
+        "The interview coaching was incredible. I went from being nervous about technical questions to confidently discussing API documentation and user experience. I got offers from 3 companies!"
+      </p>
+    </div>
+    <div class="testimonial-author">
+      <div class="author-avatar">
+        <img src="https://randomuser.me/api/portraits/men/19.jpg" alt="Ahmed Patel Avatar" class="avatar-img">
+      </div>
+      <div class="author-info">
+        <h4>Ahmed Patel</h4>
+        <p>Administrative Assistant → Technical Writer at Salesforce</p>
+        <div class="salary-increase">
+          <span class="old-salary">$38K/year</span>
+          <span class="arrow">→</span>
+          <span class="new-salary pulse">$88K/year</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
       <div class="stats-section fade-in">
         <h3>Program Results</h3>
         <div class="stats-grid">
           <div class="stat-item scale-in stagger-1">
-            <div class="stat-number text-success">500+</div>
+            <div class="stat-number text-success">50+</div>
             <div class="stat-label">Students Graduated</div>
             <div class="stat-bar">
               <div class="stat-fill" style="width: 100%"></div>
@@ -204,7 +198,16 @@ import Footer from '../components/Footer.astro';
 </Layout>
 
 <style>
-    
+   
+   .author-avatar .avatar-img {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 15px rgba(30, 58, 138, 0.3);
+  display: block;
+}
+
  .program-cta {
     text-align: center;
     background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
