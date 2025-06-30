@@ -1,0 +1,39 @@
+---
+// components/PdfViewer.astro
+const { pdfPath, viewerId } = Astro.props;
+---
+
+<div id={viewerId} class="pdf-viewer-container">
+  <canvas id={`${viewerId}-canvas`}></canvas>
+</div>
+
+<script is:inline>
+  import('pdfjs-dist/build/pdf').then(pdfjsLib => {
+    pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+
+    const loadingTask = pdfjsLib.getDocument({ url: '/offer-letters/' + '{{pdfPath}}' });
+    loadingTask.promise.then(pdf => {
+      pdf.getPage(1).then(page => {
+        const scale = 1.5;
+        const canvas = document.getElementById('{{viewerId}}-canvas');
+        const context = canvas.getContext('2d');
+
+        const viewport = page.getViewport({ scale: scale });
+        canvas.height = viewport.height;
+        canvas.width = viewport.width;
+
+        page.render({ canvasContext: context, viewport: viewport });
+      });
+    });
+  });
+</script>
+
+<style>
+  .pdf-viewer-container canvas {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+</style>
